@@ -5,43 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blinking Multi-Colored Lights with Synchronized Background Color</title>
 <style>
-/* Base styles */
 body, html {
 margin: 0;
 height: 100%;
 overflow: hidden;
-animation: blinkBackground 2s infinite ease-in-out; /* Animate background color */
+animation: blinkBackground 2s infinite ease-in-out;
 }
-
-/* Keyframes for background blinking */
 @keyframes blinkBackground {
-0%, 100% { background-color: #1ac8f3; } /* Initial background color */
-50% { background-color: #1f37bf; } /* Change to a deeper blue */
+0%, 100% { background-color: #1ac8f3; }
+50% { background-color: #1f37bf; }
 }
-
-/* Light container */
 .lights-container {
 position: relative;
 width: 100%;
 height: 100%;
 overflow: hidden;
 }
-
-/* Individual light styling */
 .light {
 position: absolute;
 border-radius: 50%;
 animation: blink 2s infinite ease-in-out;
 opacity: 0;
 }
-
-/* Keyframes for the blinking effect */
 @keyframes blink {
 0%, 100% { opacity: 0; }
 50% { opacity: 1; }
 }
-
-/* Create multiple blinking lights with different colors, positions, sizes, and delays */
 .light:nth-child(1) { 
 top: 10%; left: 15%; width: 20px; height: 20px; background: radial-gradient(circle, #ff0000, rgba(255, 0, 0, 0)); animation-delay: 0s; 
 }
@@ -102,13 +91,10 @@ top: 60%; left: 80%; width: 28px; height: 28px; background: radial-gradient(circ
 .light:nth-child(20) { 
 top: 45%; left: 35%; width: 22px; height: 22px; background: radial-gradient(circle, #20b2aa, rgba(32, 178, 170, 0)); animation-delay: 1.8s; 
 }
-
 </style>
 </head>
 <body>
-
 <div class="lights-container">
-<!-- Blinking light elements -->
 <div class="light"></div>
 <div class="light"></div>
 <div class="light"></div>
@@ -130,6 +116,5 @@ top: 45%; left: 35%; width: 22px; height: 22px; background: radial-gradient(circ
 <div class="light"></div>
 <div class="light"></div>
 </div>
-
 </body>
 </html>
